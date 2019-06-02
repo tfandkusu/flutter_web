@@ -92,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // APIから取ってくる
   loadData() async {
-    String url = 'https://jjsonplaceholder.appspot.com/cards/1';
+    String url = '/cards/1';
     http.Response response = await http.get(url);
     var card = json.decode(utf8.decode(response.bodyBytes));
     // 画面を更新
