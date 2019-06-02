@@ -40,8 +40,8 @@ if __name__ == '__main__':
     # ローカルテスト環境
     @app.after_request
     def add_cross_origin_header(response):
-        # Flutter Webのポート番号
+        # 8080はFlutter Webのポート番号
         response.headers['Access-Control-Allow-Origin'] = 'http://localhost:8080'
         return response
-    # ポート番号
+    # Flaskはポート番号5000で起動
     app.run(host='127.0.0.1', port=5000, debug=True)
