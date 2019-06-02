@@ -16,6 +16,7 @@ cards = maker.make()
 
 @app.route('/')
 def root():
+    # index.htmlはtemplatesディレクトリに置く
     return render_template('index.html')
 
 @app.route('/cards')
